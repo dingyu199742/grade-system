@@ -1,0 +1,119 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.demo-1 .large-header {
+	background-image: url('../img/star.jpg');
+}
+.logo_box{
+	width: 400px;
+	height: 500px;
+	padding: 35px;
+	color: #EEE;
+	position: absolute;
+	left: 50%;
+	top:60%;
+	margin-left: -200px;
+	margin-top: -250px;
+}
+.logo_box p{
+	text-align: center;
+	height: 20px;
+	font: 23px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei",sans-serif;
+	color: #FFFFFF;
+	height: 20px;
+	line-height: 20px;
+	padding:0 0 35px 0; 
+}
+.forms{
+	width: 280px;
+	height: 485px;
+}
+.logon_inof{
+	width: 100%;
+	min-height: 450px;
+	padding-top: 35px;
+	position: relative;
+}		
+.input_outer{
+	height: 46px;
+	padding: 0px 5px 5px 5px;
+	margin-bottom: 20px;
+	border-radius: 50px;
+	position: relative;
+	border: rgba(255,255,255,0.2) 2px solid !important;
+}
+.input_outer2{
+	height: 46px;
+	padding: 0px 5px 5px 5px;
+	margin-bottom: 10px;
+	border-radius: 50px;
+	position: relative;
+	
+}
+.input_outer3{
+	height: 43px;
+	padding: 0px;
+	margin-bottom: 20px;
+	border-radius: 50px;
+	position: relative;
+	
+}
+.u_user{
+	width: 25px;
+	height: 25px;
+	background: url(../img/login_ico.png);
+	background-position:  -125px 0;
+	position: absolute;
+	margin: 10px 13px;
+}
+.us_uer{
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/login_ico.png);
+	background-position: -125px -34px;
+	position: absolute;
+	margin: 10px 13px;
+}
+.l-login{
+	position: absolute;
+	z-index: 1;
+	left: 50px;
+	top: 0;
+	height: 46px;
+	font: 16px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";
+	line-height: 46px;
+}
+.text{
+	width: 220px;
+	height: 46px;
+	outline: none;
+	display: inline-block;
+	font: 16px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei";
+	margin-left: 50px;
+	border: none;
+	background: none;
+	line-height: 46px;
+	
+}
+/*///*/
+
+.act-but{
+	height: 40px;
+	width:330px;
+	text-align: center;
+	font-size: 17px;
+	border-radius: 50px;
+	background: #0096e6;
+	opacity:0.6;
+	border: none;
+	margin-bottom: 0px;
+	color:#DCDCDC;
+}

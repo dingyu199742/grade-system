@@ -1,0 +1,76 @@
+<%@page import="entity.Information"%>
+<%@page import="dao.StudentDao"%>
+<%@page import="entity.Student"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+    	<meta charset="UTF-8">
+    	<title>Title</title>
+    	<link rel="stylesheet" href="css/common.css">
+    	<link rel="stylesheet" href="css/StudentScrCpt.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	</head>
+	<body>
+		<div class="EmInformation container"">
+			
+			<div class="information-content content">
+				<div class="information-title">
+	        			<span>当前位置>通知公告</span>
+	    		</div>	
+				<!-- <form> -->
+		        	<!--模块开始-->
+		        	<div class="unit-information">
+		        	    
+		        	    <%Map<String, Information> map = (Map<String, Information>) request.getAttribute("news");%>
+						<div class="table-responsive table2excel" style="margin-left:20px">
+		            		<table border="1" cellspacing="0" width="720px">
+		        				<tr><td>标题</td><td>发布时间</td></tr>
+		        				<%
+										for (Map.Entry<String, Information> entry:map.entrySet()) {
+								%>
+		        				<tr>
+										<td><a href="/grade_srdp/findOneNewsServlet?fileName=<%=entry.getValue().getFileName()%>&time=<%=entry.getValue().getTime()%>&op=find"><%=entry.getValue().getBiaoqian()%></a></td>
+										<td><%=entry.getValue().getTime()%></td>
+	
+								</tr>
+								<%
+									}
+								%>
+ 
+		        			</table>
+		            	</div>
+		        	</div><br />
+		        	<!--模块结束-->
+		        	
+			        <!-- <input style="padding: 1px 8px 2px 8px;margin-left: 320px;margin-bottom: 10px;"id="btn" class="btn btn-primary" type="submit" value="导出至Excel" name="Submit2"/> -->
+		        <!-- </form> -->
+		       
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="dist/jquery.table2excel.js"></script>
+		<script>
+			$(function() {
+				$("#btn").click(function(){
+				$(".table2excel").table2excel({
+				exclude: ".noExl",
+				name: "Excel Document Name",
+				filename: "myFileName",
+				exclude_img: true,
+				exclude_links: true,
+				exclude_inputs: true
+				});
+			});
+						
+		});
+		</script>
+		<!--<script src="js/jquery-1.9.1.min.js"></script>-->
+	</body>
+</html>
